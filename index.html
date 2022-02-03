@@ -17,30 +17,33 @@
       src="https://kit.fontawesome.com/7c2c9eccf3.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
     <div class="container">
       <div class="weather-app">
-        <div class="weather-app-wrapper">
-          <h1>City name</h1>
-          <ul>
-            <li>Day of week and time</li>
-            <li>Weather description</li>
-          </ul>
-          <div class="row">
-            <div class="col-6">
-              <div class="clearfix weather-temperature">
-                <i class="fas fa-sun"></i>
-                <strong>12</strong>
-                <span class="units">°F | <a href="#">°C</a></span>
+        <div class="weather-overview">
+          <div class="weather-app-wrapper">
+            <h1 id="city"></h1>
+            <ul>
+              <li>Day of week and time</li>
+              <li id="description"></li>
+            </ul>
+            <div class="row">
+              <div class="col-6">
+                <div class="clearfix weather-temperature">
+                  <i class="fas fa-sun"></i>
+                  <strong id="temperature"></strong>
+                  <span class="units">°F | <a href="#">°C</a></span>
+                </div>
               </div>
-            </div>
-            <div class="col-6">
-              <ul>
-                <li>precipitation: 0%</li>
-                <li>humidity: 0%</li>
-              </ul>
+              <div class="col-6">
+                <ul>
+                  <li>Wind: <span id="wind"></span> Km/H</li>
+                  <li>humidity: <span id="humidity"></span>%</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
