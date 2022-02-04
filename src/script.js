@@ -21,7 +21,7 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function dispalyInformation(response) {
+function displayInformation(response) {
   let temperatureElement = document.querySelector("#temperature");
 
   let cityElement = document.querySelector("#city");
@@ -47,8 +47,8 @@ function dispalyInformation(response) {
 
 function search(city) {
   let apiKey = "ecfb1152c5a567d13565473b15c3239c";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
-  axios.get(apiUrl).then(dispalyInformation);
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayInformation);
 }
 
 function handleSubmit(event) {
@@ -87,3 +87,18 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 search("Houston");
+
+function searchLocation(position) {
+  let apiKey = "ecfb1152c5a567d13565473b15c3239c";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(displayInformation);
+}
+
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
+
+let currentLocationButton = document.querySelector("#current-location-button");
+currentLocationButton.addEventListener("click", getCurrentLocation);
