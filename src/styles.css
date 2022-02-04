@@ -6,9 +6,10 @@ body {
   max-width: 600px;
   margin: 30 auto;
   padding: 20px;
-  border: 1px solid gray;
+  border: 1px solid #3282b8;
   border-radius: 5px;
   margin-top: 30px;
+  background: #0f4c75;
 }
 
 .weather-overview {
@@ -16,12 +17,13 @@ body {
 }
 
 h1 {
-  color: #878787;
+  color: #9cd9de;
+  text-decoration: underline;
   display: block;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 100;
   line-height: 28px;
-  margin-bottom: 0;
+  margin-bottom: 3;
 }
 
 ul {
@@ -31,7 +33,7 @@ ul {
 
 li {
   list-style: none;
-  color: rgb(135, 135, 135);
+  color: #9cd9de;
   text-transform: capitalize;
   font-size: 16px;
   font-weight: 100;
@@ -50,10 +52,10 @@ li {
 }
 
 .weather-temperature strong {
-  color: rgb(33, 33, 33);
+  color: #9cd9de;
   font-size: 64px;
   font-weight: 400;
-  line-height: 1;
+  line-height: 2;
 }
 
 .units {
@@ -63,7 +65,7 @@ li {
 }
 
 .active {
-  color: rgb(33, 33, 33);
+  color: #9cd9de;
   cursor: default;
 }
 
