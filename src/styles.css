@@ -72,3 +72,22 @@ li {
 .active:hover {
   text-decoration: none;
 }
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+  color:#9cd9de
+}
+
+.weather-forecast-temp {
+  font-size: 13px;
+  color:#9cd9de
+}
+
+.weather-forecast-min {
+  opacity: 0.5;
+}
