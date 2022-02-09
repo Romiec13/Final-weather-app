@@ -21,6 +21,30 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function dipslayForecast() {
+  let forecastElement= document.querySelector("#forecast");
+  let forecastHTML= `<div class="row">`;
+  let days=["Thu", "Fri", "Sat", "Sun", "Mon"];
+  days.forEach(function(day) {
+    forecastHTML= forecastHTML + `
+    <div class="col-2">
+    <div class="weather-forecast-date">
+      ${day}
+    </div>
+    <img src="	https://openweathermap.org/img/wn/01d@2x.png" alt="" width="45"/>
+    <div class="weather-forecast-temp">
+      <span class="weather-forecast-max">18°</span>
+    <span class="weather-forecast-min">12°</span>
+    </div>
+  </div>
+  `;
+  });
+
+  forecastHTML= forecastHTML + '</div>'
+  forecastElement.innerHTML= forecastHTML;
+}
+
+
 function displayInformation(response) {
   let temperatureElement = document.querySelector("#temperature");
 
@@ -87,6 +111,7 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 search("Houston");
+dipslayForecast();
 
 function searchLocation(position) {
   let apiKey = "ecfb1152c5a567d13565473b15c3239c";
