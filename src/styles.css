@@ -3,13 +3,13 @@ body {
 }
 
 .weather-app {
-  max-width: 600px;
+  max-width: 650px;
   margin: 30 auto;
   padding: 20px;
   border: 1px solid #3282b8;
   border-radius: 5px;
   margin-top: 30px;
-  background: #0f4c75;
+  background: #17679c;
 }
 
 .weather-overview {
@@ -62,16 +62,9 @@ li {
   position: relative;
   font-size: 16px;
   top: -34px;
-}
-
-.active {
   color: #9cd9de;
-  cursor: default;
 }
 
-.active:hover {
-  text-decoration: none;
-}
 
 .weather-forecast {
   margin-top: 20px;
@@ -79,7 +72,7 @@ li {
 }
 
 .weather-forecast-date {
-  font-size: 16px;
+  font-size: 15px;
   color:#9cd9de
 }
 
@@ -90,4 +83,8 @@ li {
 
 .weather-forecast-min {
   opacity: 0.5;
+}
+
+#icon {
+  text-align: center;
 }
