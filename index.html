@@ -19,14 +19,14 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
+      <div class="weather-app shadow">
         <form id="search-form" class="mb-3">
           <div class="row">
             <div class="col-6">
               <input
                 type="search"
                 placeholder="Input city here"
-                class="form-control"
+                class="form-control shadow"
                 autocomplete="off"
                 id="city-input"
               />
@@ -34,17 +34,17 @@
             <div class="col-3">
               <input
                 type="submit"
-                value="search"
-                class="btn btn-primary w-100"
+                value="Search"
+                class="btn btn-primary w-100 shadow"
               />
             </div>
             <div class="col-3">
-              <button
-                class="btn btn-primary w-100"
-                id="current-location-button"
-              >
-                current
-              </button>
+              <input
+              type="submit"
+              value="Current"
+              class="btn btn-primary w-100 shadow"
+              id="current-location-button"
+            />
             </div>
           </div>
         </form>
