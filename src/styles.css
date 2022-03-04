@@ -22,6 +22,11 @@ body {
   margin-bottom: 20px;
 }
 
+.search-link {
+  display: flex;
+  justify-content: center;
+}
+
 h1 {
   color: var(--secondary-color);
   text-decoration: underline;
@@ -54,6 +59,8 @@ li {
 .btn {
   color: white!important;
   background: var(--secondary-color)!important;
+  width: 100px;
+
 }
 
 .btn:hover {
