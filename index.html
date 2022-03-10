@@ -20,9 +20,9 @@
   <body>
     <div class="container">
       <div class="weather-app shadow">
-        <form id="search-form" class="mb-3">
+        <form id="search-form" class="mb-3 text-center">
           <div class="row">
-            <div class="col-6">
+            <div class="col-sm-6">
               <input
                 type="search"
                 placeholder="Input city here"
@@ -31,14 +31,14 @@
                 id="city-input"
               />
             </div>
-            <div class="col-3">
+            <div class="col-sm-3">
               <input
                 type="submit"
                 value="Search"
                 class="btn btn-primary shadow"
               />
             </div>
-            <div class="col-3">
+            <div class="col-sm-3">
               <input
               type="submit"
               value="Current"
@@ -50,13 +50,23 @@
         </form>
         <div class="weather-overview">
           <div class="weather-app-wrapper">
-            <h1 id="city"></h1>
+            <h1 id="city" class="text-center mb-4"></h1>
+            <div class="row">
+              <div class="col-sm-6 text-center">
             <ul>
               <li><span id="date"></span></li>
               <li id="description"></li>
             </ul>
-            <div class="row">
-              <div class="col-6">
+            </div>
+    
+              <div class="col-sm-6 text-center">
+            <ul>
+              <li>Wind: <span id="wind"></span> M/H</li>
+              <li>humidity: <span id="humidity"></span>%</li>
+            </ul>
+            </div>
+            </div>
+          
                 <div class="clearfix weather-temperature">
                   <img src="" alt="clear" id="icon" class="float-left" />
                   <strong id="temperature"></strong>
@@ -64,28 +74,24 @@
                     > °F</span
                   >
                 </div>
-              </div>
-              <div class="col-6">
-                <ul>
-                  <li>Wind: <span id="wind"></span> M/H</li>
-                  <li>humidity: <span id="humidity"></span>%</li>
-                </ul>
-              </div>
+             
+              
             </div>
           </div>
-        </div>
-        <div class="weather-forcast" id="forecast">
+        <div class="weather-forecast" id="forecast">
           
           
       
         </div>
       </div>
+      <footer>
       <small
         ><a href="https://thirsty-golick-06190f.netlify.app/" target="_blank"
           >Open-Source Code</a
         >
         by Romie Castilleja</small
       >
+    </footer>
     </div>
     <script src="src/script.js"></script>
   </body>
